@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="105dp" android:width="105dp" android:viewportWidth="105" android:viewportHeight="105">
+    <group android:name="Player/Controls/Pause" android:translateX="0" android:translateY="0">
+        <path android:name="Oval" android:fillColor="#fab600" android:pathData="M 0,52.5 a 52.5,52.5 0 0 1 105,0 a 52.5,52.5 0 0 1 -105,0 z" android:strokeColor="#00000000" android:strokeWidth="1" android:fillAlpha="0" android:fillType="evenOdd"/>
+        <path android:name="Combined-Shape" android:fillColor="#ffffff" android:pathData="M41.65 29 C44.2181241 29 46.3 31.0818759 46.3 33.65 L46.3 71.35 C46.3 73.9181241 44.2181241 76 41.65 76 C39.0818759 76 37 73.9181241 37 71.35 L37 33.65 C37 31.0818759 39.0818759 29 41.65 29 Z M63.35 29 C65.9181241 29 68 31.0818759 68 33.65 L68 71.35 C68 73.9181241 65.9181241 76 63.35 76 C60.7818759 76 58.7 73.9181241 58.7 71.35 L58.7 33.65 C58.7 31.0818759 60.7818759 29 63.35 29 Z" android:strokeColor="#00000000" android:strokeWidth="1" android:fillType="evenOdd"/>
+    </group>
+</vector>

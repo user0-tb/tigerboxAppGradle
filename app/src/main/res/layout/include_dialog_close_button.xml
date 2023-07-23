@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/selectableItemBackgroundBorderless" android:layout_width="@dimen/dp_50" android:layout_height="@dimen/dp_50" android:scaleType="fitCenter" app:srcCompat="@drawable/vector_header_close"/>

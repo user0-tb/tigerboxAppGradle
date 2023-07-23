@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:textSize="@dimen/text_size_large" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/footer_item" android:tag="layout/item_footer_0" android:padding="@dimen/dp_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/shop_page_more" android:drawablePadding="@dimen/dp_10" app:drawableTopCompat="@drawable/vector_show_more"/>

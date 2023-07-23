@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:theme="@style/FullscreenDialogTheme" android:id="@+id/settings_seekbar_content" android:tag="layout/fragment_fullscreen_seekbar_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/fragment_headerBar" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/include_dialog_header_bar"/>
+    <SeekBar android:id="@+id/settings_seekbar_seekbar" android:layout_width="0dp" android:layout_height="wrap_content" android:progressDrawable="@drawable/seekbar_progress_sleep_timer_background" android:thumb="@drawable/seekbar_brightness_thumb" android:paddingStart="@dimen/dp_50" android:paddingEnd="@dimen/dp_50" android:splitTrack="false" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <androidx.appcompat.widget.AppCompatToggleButton android:id="@+id/settings_seekbar_button" android:textOn="@string/settings_seekbar_button_text" android:textOff="@string/settings_seekbar_button_text" android:text="@string/settings_seekbar_button_text" android:checkable="true" android:paddingStart="@dimen/dp_20" android:paddingEnd="@dimen/dp_20" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/settings_seekbar_seekbar" style="@style/Settings.SleepTimer.Button"/>
+    <LinearLayout android:id="@+id/settings_seekbar_sleep_value" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="@dimen/dp_50" android:weightSum="9" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <ImageView android:background="?android:attr/selectableItemBackgroundBorderless" android:layout_height="@dimen/dp_50" android:scaleType="fitCenter" app:srcCompat="@drawable/vector_header_close" app:tint="@color/white" style="?attr/settingsSleepTimerStyle"/>
+        <TextView android:textColor="@color/white" android:text="5" style="?attr/settingsSleepTimerStyle"/>
+        <TextView android:textColor="@color/white" android:text="10" style="?attr/settingsSleepTimerStyle"/>
+        <TextView android:textColor="@color/white" android:text="15" style="?attr/settingsSleepTimerStyle"/>
+        <TextView android:textColor="@color/white" android:text="20" style="?attr/settingsSleepTimerStyle"/>
+        <TextView android:textColor="@color/white" android:text="30" style="?attr/settingsSleepTimerStyle"/>
+        <TextView android:textColor="@color/white" android:text="40" style="?attr/settingsSleepTimerStyle"/>
+        <TextView android:textColor="@color/white" android:text="50" style="?attr/settingsSleepTimerStyle"/>
+        <TextView android:textColor="@color/white" android:text="60" style="?attr/settingsSleepTimerStyle"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/onboarding_nav_graph" app:startDestination="@+id/onboardingStep1Screen1Fragment">
+    <fragment android:label="fragment_onboarding_step1_screen1" android:name="media.tiger.tigerbox.ui.onboarding.step1.OnboardingStep1Screen1Fragment" android:id="@+id/onboardingStep1Screen1Fragment">
+        <action android:id="@+id/action_onboardingStep1Fragment_to_onboardingStep2Fragment" app:destination="@+id/onboardingStep1Screen2Fragment"/>
+        <action android:id="@+id/action_onboarding_move_to_login_from_start" app:destination="@+id/onboardingLoginFragment"/>
+        <action android:id="@+id/action_onboardingStep1Fragment_to_main_content" app:destination="@+id/mainContentActivity" app:popUpTo="@+id/mainContentActivity" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:label="fragment_onboarding_step2" android:name="media.tiger.tigerbox.ui.onboarding.step1.OnboardingStep1Screen2Fragment" android:id="@+id/onboardingStep1Screen2Fragment">
+        <action android:id="@+id/action_onboardingStep2Fragment_to_onboardingStep3Fragment" app:destination="@+id/onboardingStep3Fragment"/>
+    </fragment>
+    <fragment android:label="fragment_onboarding_step3" android:name="media.tiger.tigerbox.ui.onboarding.step1.OnboardingStep1Screen3Fragment" android:id="@+id/onboardingStep3Fragment">
+        <action android:id="@+id/action_onboardingStep3Fragment_to_onboardingWifiListFragment" app:destination="@+id/onboardingWifiListFragment"/>
+    </fragment>
+    <fragment android:label="fragment_onboarding_wifi_list" android:name="media.tiger.tigerbox.ui.onboarding.step2.OnboardingWifiListFragment" android:id="@+id/onboardingWifiListFragment">
+        <action android:id="@+id/action_onboardingWifiListFragment_to_onboardingErrorDialog" app:destination="@+id/onboardingInfoDialog"/>
+        <action android:id="@+id/action_onboardingWifiListFragment_to_onboardingWifiEnterPasswordFragment" app:destination="@+id/onboardingWifiEnterPasswordFragment"/>
+        <action android:id="@+id/action_onboardingWifiListFragment_to_onboardingUpdateFragment" app:destination="@+id/onboardingUpdateFragment"/>
+        <action android:id="@+id/action_onboardingWifiListFragment_to_onboardingConnectedWithInternetFragment" app:destination="@+id/onboardingConnectedWithInternetFragment"/>
+    </fragment>
+    <fragment android:label="fragment_onboarding_wifi_list" android:name="media.tiger.tigerbox.ui.common.InfoDialogFragment" android:id="@+id/onboardingInfoDialog">
+        <argument android:name="dialogType" app:argType="media.tiger.tigerbox.ui.common.InfoDialogType"/>
+        <argument android:name="titleFormatParams" android:defaultValue="@null" app:argType="string[]" app:nullable="true"/>
+        <argument android:name="messageFormatParams" android:defaultValue="@null" app:argType="string[]" app:nullable="true"/>
+    </fragment>
+    <fragment android:label="OnboardingWifiEnterPasswordFragment" android:name="media.tiger.tigerbox.ui.common.wifi.WifiEnterPasswordFragment" android:id="@+id/onboardingWifiEnterPasswordFragment">
+        <argument android:name="wifiName" app:argType="string"/>
+    </fragment>
+    <fragment android:label="OnboardingUpdateFragment" android:name="media.tiger.tigerbox.ui.onboarding.step3.OnboardingUpdateFragment" android:id="@+id/onboardingUpdateFragment">
+        <action android:id="@+id/action_updateFragment_to_onboardingConnectedWithInternetFragment" app:destination="@+id/onboardingConnectedWithInternetFragment"/>
+        <action android:id="@+id/action_updateFragment_to_onboardingErrorDialog" app:destination="@+id/onboardingInfoDialog"/>
+        <argument android:name="source" android:defaultValue="ONBOARDING" app:argType="string"/>
+    </fragment>
+    <fragment android:label="OnboardingConnectedWithInternetFragment" android:name="media.tiger.tigerbox.ui.onboarding.step4.OnboardingConnectedWithInternetFragment" android:id="@+id/onboardingConnectedWithInternetFragment">
+        <action android:id="@+id/action_onboardingConnectedWithInternetFragment_to_onboardingRegistrationFragment" app:destination="@+id/onboardingRegistrationFragment"/>
+        <action android:id="@+id/action_onboardingConnectedWithInternetFragment_to_onboardingLoginFragment" app:destination="@+id/onboardingLoginFragment"/>
+    </fragment>
+    <fragment android:label="OnboardingRegistrationFragment" android:name="media.tiger.tigerbox.ui.onboarding.step4.OnboardingRegistrationFragment" android:id="@+id/onboardingRegistrationFragment">
+        <action android:id="@+id/action_onboardingRegistrationFragment_to_onboardingLoginFragment" app:destination="@+id/onboardingLoginFragment"/>
+    </fragment>
+    <fragment android:label="OnboardingLoginFragment" android:name="media.tiger.tigerbox.ui.onboarding.step4.OnboardingLoginFragment" android:id="@+id/onboardingLoginFragment">
+        <argument android:name="sessionTokenExpired" android:defaultValue="false" app:argType="boolean"/>
+        <action android:id="@+id/action_onboardingLoginFragment_to_onboardingBackendCommunicationFragment" app:destination="@+id/onboardingBackendCommunicationFragment"/>
+    </fragment>
+    <fragment android:label="OnboardingBackendCommunicationFragment" android:name="media.tiger.tigerbox.ui.onboarding.step4.OnboardingBackendCommunicationFragment" android:id="@+id/onboardingBackendCommunicationFragment">
+        <action android:id="@+id/action_onboardingBackendCommunicationFragment_to_onboardingBackendResponseFragment" app:destination="@+id/onboardingBackendResponseFragment"/>
+        <action android:id="@+id/action_onboardingBackendCommunicationFragment_to_mainContentActivity" app:destination="@+id/mainContentActivity" app:popUpTo="@+id/mainContentActivity" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:label="OnboardingDataNotFoundFragment" android:name="media.tiger.tigerbox.ui.onboarding.step4.OnboardingBackendResponseFragment" android:id="@+id/onboardingBackendResponseFragment">
+        <argument android:name="responseType" android:defaultValue="BEARER_TOKEN" app:argType="media.tiger.tigerbox.ui.onboarding.step4.BackendResponseType"/>
+        <action android:id="@+id/action_onboardingBackendResponseFragment_to_onboardingStep1Screen1Fragment" app:destination="@+id/onboardingStep1Screen1Fragment"/>
+        <action android:id="@+id/action_onboardingBackendResponseFragment_to_onboardingLoginFragment" app:destination="@+id/onboardingLoginFragment"/>
+        <action android:id="@+id/action_onboardingBackendResponseFragment_to_mainContentActivity" app:destination="@+id/mainContentActivity" app:popUpTo="@+id/mainContentActivity" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_onboardingBackendResponseFragment_to_onboardingWifiListFragment" app:destination="@+id/onboardingWifiListFragment"/>
+    </fragment>
+    <dialog android:label="resetInProgressFragment" android:name="media.tiger.tigerbox.ui.common.reset.ResetInProgressFragment" android:id="@+id/resetInProgressFragment"/>
+    <dialog android:label="resetDialogFragment" android:name="media.tiger.tigerbox.ui.common.reset.ResetDialogFragment" android:id="@+id/resetDialogFragment">
+        <action android:id="@+id/action_resetDialog_to_resetInProgress" app:destination="@+id/resetInProgressFragment"/>
+    </dialog>
+    <activity android:label="mainContentActivity" android:name="media.tiger.tigerbox.ui.main.MainContentActivity" android:id="@+id/mainContentActivity"/>
+    <action android:id="@+id/action_onboarding_to_onboardingErrorDialog" app:destination="@+id/onboardingInfoDialog"/>
+    <action android:id="@+id/action_onboarding_to_resetDialog" app:destination="@+id/resetDialogFragment"/>
+</navigation>

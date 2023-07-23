@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mediaPlayer_layout" android:tag="layout/fragment_media_player_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/fragment_headerBar" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/include_dialog_header_bar"/>
+    <include android:id="@+id/mediaPlayer_content" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/fragment_headerBar" layout="@layout/include_media_player"/>
+    <include android:id="@+id/mediaPlayer_loading" android:visibility="visible" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/fragment_headerBar" layout="@layout/include_data_loading"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

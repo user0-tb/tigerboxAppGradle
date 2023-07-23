@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/fragment_parental_gate_0" android:background="@color/tb_new_black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/fragment_parentalGate_guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.5"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/fragment_parentalGate_infoArea" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/dp_10" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="@+id/fragment_parentalGate_guideline" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_10">
+            <TextView android:textColor="@color/tb_new_yellow" android:id="@+id/fragment_parentalGate_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/parental_gate_title" style="@style/TigerBox.Headline1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_20">
+            <TextView android:textColor="@color/white" android:id="@+id/fragment_parentalGate_randomPinDescription" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/parental_gate_enter_random_description" style="@style/TigerBox.Paragraph"/>
+            <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/fragment_parentalGate_randomPinAsText" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/TigerBox.Headline2"/>
+            <TextView android:textColor="@color/white" android:id="@+id/fragment_parentalGate_customPinDescription" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/parental_gate_enter_account_pin_description" style="@style/TigerBox.Paragraph"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_20">
+            <TextView android:textColor="@color/dialog_textfield_text" android:id="@+id/fragment_parentalGate_pin" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="80dp" style="@style/TigerBox.Paragraph.Text.Field"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_10">
+            <Button android:id="@+id/fragment_parentalGate_cancel" android:tag="binding_5" android:text="@string/dialog_error_message_cancel_button_text" style="@style/TigerBox.Headline2.Button.Secondary"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/fragment_parentalGate_numpad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/dp_10" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/fragment_parentalGate_guideline" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@+id/fragment_parentalGate_Button1" android:tag="binding_6" app:srcCompat="@drawable/tigerbox_button_1" style="@style/PinNumberButtonStyle"/>
+            <ImageButton android:id="@+id/fragment_parentalGate_Button2" android:tag="binding_7" app:srcCompat="@drawable/tigerbox_button_2" style="@style/PinNumberButtonStyle"/>
+            <ImageButton android:id="@+id/fragment_parentalGate_Button3" android:tag="binding_8" app:srcCompat="@drawable/tigerbox_button_3" style="@style/PinNumberButtonStyle"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@+id/fragment_parentalGate_Button4" android:tag="binding_9" app:srcCompat="@drawable/tigerbox_button_4" style="@style/PinNumberButtonStyle"/>
+            <ImageButton android:id="@+id/fragment_parentalGate_Button5" android:tag="binding_10" app:srcCompat="@drawable/tigerbox_button_5" style="@style/PinNumberButtonStyle"/>
+            <ImageButton android:id="@+id/fragment_parentalGate_Button6" android:tag="binding_11" app:srcCompat="@drawable/tigerbox_button_6" style="@style/PinNumberButtonStyle"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@+id/fragment_parentalGate_Button7" android:tag="binding_12" app:srcCompat="@drawable/tigerbox_button_7" style="@style/PinNumberButtonStyle"/>
+            <ImageButton android:id="@+id/fragment_parentalGate_Button8" android:tag="binding_13" app:srcCompat="@drawable/tigerbox_button_8" style="@style/PinNumberButtonStyle"/>
+            <ImageButton android:id="@+id/fragment_parentalGate_Button9" android:tag="binding_14" app:srcCompat="@drawable/tigerbox_button_9" style="@style/PinNumberButtonStyle"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/fragment_parentalGate_Button0" android:tag="binding_15" app:srcCompat="@drawable/tigerbox_button_0" style="@style/PinNumberButtonStyle"/>
+            <ImageButton android:layout_gravity="center" android:id="@+id/fragment_parentalGate_BackSpace" android:tag="binding_16" app:srcCompat="@drawable/tigerbox_button_delete_back" style="@style/PinNumberButtonStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

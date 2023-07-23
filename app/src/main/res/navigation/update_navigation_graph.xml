@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/update_nav_graph" app:startDestination="@+id/updateFragment">
+    <fragment android:label="fragment_onboarding_wifi_list" android:name="media.tiger.tigerbox.ui.common.InfoDialogFragment" android:id="@+id/onboardingInfoDialog">
+        <argument android:name="dialogType" app:argType="media.tiger.tigerbox.ui.common.InfoDialogType"/>
+        <argument android:name="titleFormatParams" android:defaultValue="@null" app:argType="string[]" app:nullable="true"/>
+        <argument android:name="messageFormatParams" android:defaultValue="@null" app:argType="string[]" app:nullable="true"/>
+    </fragment>
+    <fragment android:label="OnboardingUpdateFragment" android:name="media.tiger.tigerbox.ui.onboarding.step3.OnboardingUpdateFragment" android:id="@+id/updateFragment">
+        <action android:id="@+id/action_updateFragment_to_onboardingErrorDialog" app:destination="@+id/onboardingInfoDialog"/>
+        <argument android:name="source" android:defaultValue="SETTINGS" app:argType="string"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="105dp" android:width="105dp" android:viewportWidth="105" android:viewportHeight="105">
+    <group android:name="Player/Controls/Play" android:translateX="0" android:translateY="0">
+        <path android:name="Oval" android:fillColor="#fab600" android:pathData="M 0,52.5 a 52.5,52.5 0 0 1 105,0 a 52.5,52.5 0 0 1 -105,0 z" android:strokeColor="#00000000" android:strokeWidth="1" android:fillAlpha="0" android:fillType="evenOdd"/>
+        <path android:name="Triangle" android:fillColor="#ffffff" android:pathData="M71.5709114 55.0241902 L43.9924128 75.3250294 C42.5983411 76.3512212 40.6363298 76.0529955 39.6101381 74.6589237 C39.2137901 74.1204887 39 73.4694228 39 72.8008392 L39 32.1991608 C39 30.468119 40.4032866 29.0648324 42.1343284 29.0648324 C42.8029119 29.0648324 43.4539778 29.2786226 43.9924128 29.6749706 L71.5709114 49.9758098 C72.9649832 51.0020015 73.2632089 52.9640127 72.2370171 54.3580845 C72.0498064 54.6124085 71.8252354 54.8369795 71.5709114 55.0241902 Z" android:strokeColor="#00000000" android:strokeWidth="1" android:fillType="evenOdd"/>
+    </group>
+</vector>

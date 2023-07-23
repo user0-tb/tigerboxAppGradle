@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:id="@+id/data_loading" android:background="@drawable/background_progress_bar_player" android:padding="@dimen/dp_20" android:focusable="true" android:clickable="true" android:layout_width="@dimen/dp_270" android:layout_height="@dimen/dp_270" android:alpha="0.8">
+    <ProgressBar android:visibility="visible" android:layout_width="@dimen/dp_160" android:layout_height="@dimen/dp_160" android:indeterminate="true" android:indeterminateDrawable="@drawable/progress_indeterminate_slow" style="@android:style/Widget.ProgressBar.Large"/>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="105dp" android:width="105dp" android:viewportWidth="105" android:viewportHeight="105">
+    <group android:name="Player/Controls/Skip" android:translateX="0" android:translateY="0">
+        <path android:name="Oval" android:fillColor="#fab600" android:pathData="M 0,52.5 a 52.5,52.5 0 0 1 105,0 a 52.5,52.5 0 0 1 -105,0 z" android:strokeColor="#00000000" android:strokeWidth="1" android:fillAlpha="0" android:fillType="evenOdd"/>
+        <path android:name="Triangle" android:fillColor="#ffffff" android:pathData="M60.5709114 56.0241902 L32.9924128 76.3250294 C31.5983411 77.3512212 29.6363298 77.0529955 28.6101381 75.6589237 C28.2137901 75.1204887 28 74.4694228 28 73.8008392 L28 33.1991608 C28 31.468119 29.4032866 30.0648324 31.1343284 30.0648324 C31.8029119 30.0648324 32.4539778 30.2786226 32.9924128 30.6749706 L60.5709114 50.9758098 C61.9649832 52.0020015 62.2632089 53.9640127 61.2370171 55.3580845 C61.0498064 55.6124085 60.8252354 55.8369795 60.5709114 56.0241902 Z" android:strokeColor="#00000000" android:strokeWidth="1" android:fillType="evenOdd"/>
+        <path android:name="Rectangle" android:fillColor="#ffffff" android:pathData="M 71.5,30 Q 76,30 76,34.5 L 76,72.5 Q 76,77 71.5,77 L 71.5,77 Q 67,77 67,72.5 L 67,34.5 Q 67,30 71.5,30 z" android:strokeColor="#00000000" android:strokeWidth="1" android:fillType="evenOdd"/>
+    </group>
+</vector>

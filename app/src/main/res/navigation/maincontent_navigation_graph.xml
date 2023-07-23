@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/maincontent_nav_graph" app:startDestination="@+id/mainContentProductList">
+    <fragment android:label="fragment_maincontent" android:name="media.tiger.tigerbox.ui.main.maincontent.ProductListMainContentFragment" android:id="@+id/mainContentProductList">
+        <action android:id="@+id/action_productListMainContent_to_seeMoreProducts" app:destination="@+id/mainContentSeeMoreProducts" app:popUpTo="@+id/mainContentProductList" app:popUpToInclusive="false"/>
+        <action android:id="@+id/action_mainContent_to_tigerTicketValid" app:destination="@+id/tigerTicketValidFragment" app:popUpTo="@+id/mainContentProductList" app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment android:label="fragment_see_more_products" android:name="media.tiger.tigerbox.ui.main.seemoreproducts.SeeMoreProductsFragment" android:id="@+id/mainContentSeeMoreProducts">
+        <argument android:name="rowId" app:argType="integer"/>
+        <argument android:name="ordinal" app:argType="integer"/>
+    </fragment>
+    <fragment android:label="OfflineModeFragment" android:name="media.tiger.tigerbox.ui.main.offlinemode.OfflineModeFragment" android:id="@+id/offlineModeFragment">
+        <action android:id="@+id/action_offlineModeFragment_to_settingsWifiListFragment" app:destination="@+id/settingsWifiListFragment"/>
+    </fragment>
+    <fragment android:label="MultiProductCardFragment" android:name="media.tiger.tigerbox.ui.main.multiproductcard.MultiProductCardFragment" android:id="@+id/multiProductCardFragment"/>
+    <dialog android:label="fragment_mediaplayer" android:name="media.tiger.tigerbox.ui.main.mediaplayer.MediaPlayerFragment" android:id="@+id/mainContentMediaPlayer">
+        <action android:id="@+id/action_mainContentMediaPlayer_to_mainContentMediaPlayerChapterList" app:destination="@+id/mainContentMediaPlayerChapterList"/>
+        <action android:id="@+id/action_mainContentMediaPlayer_to_mediaPlayerFullscreenCoverFragment" app:destination="@+id/mediaPlayerFullscreenCoverFragment"/>
+    </dialog>
+    <dialog android:label="fragment_profiles" android:name="media.tiger.tigerbox.ui.main.profiles.ProfilesFragment" android:id="@+id/mainContentProfilesSwitching"/>
+    <dialog android:label="fragment_mediaplayer_chapter_list" android:name="media.tiger.tigerbox.ui.main.mediaplayer.MediaPlayerChapterListFragment" android:id="@+id/mainContentMediaPlayerChapterList">
+        <argument android:name="productDomain" app:argType="media.tiger.tigerbox.model.domain.ProductDomain"/>
+    </dialog>
+    <dialog android:label="InfoDialogFragment" android:name="media.tiger.tigerbox.ui.common.InfoDialogFragment" android:id="@+id/infoDialogFragment"/>
+    <dialog android:label="FullScreenSeekbarFragment" android:name="media.tiger.tigerbox.ui.settings.FullScreenSeekBarFragment" android:id="@+id/fullScreenSeekBar"/>
+    <dialog android:label="TigerTicketInputPinFragment" android:name="media.tiger.tigerbox.ui.main.card.TigerTicketInputPinFragment" android:id="@+id/tigerTicketInputPinDialog">
+        <argument android:name="tigerTicketStepDomain" app:argType="media.tiger.tigerbox.services.interfaces.TigerTicketStepDomain"/>
+        <action android:id="@+id/action_tigetTicketPin_to_tigerTicketPurchaseOrCancel" app:destination="@+id/tigerTicketInputPinValid" app:popUpTo="@+id/mainContentProductList"/>
+        <action android:id="@+id/action_tigetTicketPin_to_tigerTicketPurchase" app:destination="@+id/tigerTicketPurchaseDialog" app:popUpTo="@+id/mainContentProductList"/>
+    </dialog>
+    <dialog android:label="tigerTicketInputPinValid" android:name="media.tiger.tigerbox.ui.common.InfoDialogFragment" android:id="@+id/tigerTicketInputPinValid">
+        <argument android:name="dialogType" app:argType="media.tiger.tigerbox.ui.common.InfoDialogType"/>
+        <argument android:name="titleFormatParams" android:defaultValue="@null" app:argType="string[]" app:nullable="true"/>
+        <argument android:name="messageFormatParams" android:defaultValue="@null" app:argType="string[]" app:nullable="true"/>
+    </dialog>
+    <dialog android:label="resetInProgressFragment" android:name="media.tiger.tigerbox.ui.common.reset.ResetInProgressFragment" android:id="@+id/resetInProgressFragment"/>
+    <dialog android:label="resetDialogFragment" android:name="media.tiger.tigerbox.ui.common.reset.ResetDialogFragment" android:id="@+id/resetDialogFragment">
+        <action android:id="@+id/action_resetDialog_to_resetInProgress" app:destination="@+id/resetInProgressFragment"/>
+    </dialog>
+    <dialog android:label="TigerTicketPurchaseFragment" android:name="media.tiger.tigerbox.ui.main.card.TigerTicketValidFragment" android:id="@+id/tigerTicketValidFragment">
+        <action android:id="@+id/action_tigetTicketValid_to_tigerTicketPin" app:destination="@+id/tigerTicketInputPinDialog" app:popUpTo="@+id/mainContentProductList"/>
+    </dialog>
+    <dialog android:label="TigerTicketPurchaseFragment" android:name="media.tiger.tigerbox.ui.main.card.TigerTicketPurchaseFragment" android:id="@+id/tigerTicketPurchaseDialog">
+        <argument android:name="tigerTicketCode" app:argType="string"/>
+        <argument android:name="tigerTicketPin" app:argType="string"/>
+    </dialog>
+    <dialog android:label="MediaPlayerFullscreenCoverFragment" android:name="media.tiger.tigerbox.ui.main.mediaplayer.MediaPlayerFullscreenCoverFragment" android:id="@+id/mediaPlayerFullscreenCoverFragment">
+        <argument android:name="imageUrl" android:defaultValue="&quot;&quot;" app:argType="string"/>
+    </dialog>
+    <dialog android:label="mainContentShowProfilePicture" android:name="media.tiger.tigerbox.ui.main.profiles.ProfilePictureFragment" android:id="@+id/mainContentShowProfilePicture"/>
+    <dialog android:label="fragment_settings_wifi_list" android:name="media.tiger.tigerbox.ui.settings.SettingsWifiFragment" android:id="@+id/settingsWifiListFragment">
+        <action android:id="@+id/action_settingsWifiListFragment_to_wifiEnterPasswordFragment" app:destination="@+id/wifiEnterPasswordFragment"/>
+    </dialog>
+    <dialog android:label="WifiEnterPasswordFragment" android:name="media.tiger.tigerbox.ui.common.wifi.WifiEnterPasswordFragment" android:id="@+id/wifiEnterPasswordFragment">
+        <argument android:name="wifiName" app:argType="string"/>
+    </dialog>
+    <dialog android:label="ParentalGate" android:name="media.tiger.tigerbox.ui.settings.parentalGate.ParentalGateFragment" android:id="@+id/parentalGate">
+        <action android:id="@+id/action_parentalGate_to_Settings" app:destination="@+id/settings_nav_graph" app:popUpTo="@+id/settings_nav_graph"/>
+    </dialog>
+    <action android:id="@+id/action_to_parentalGate" app:destination="@+id/parentalGate" app:enterAnim="@anim/slide_down" app:exitAnim="@anim/slide_up" app:popEnterAnim="@anim/slide_down" app:popExitAnim="@anim/slide_up" app:popUpTo="@+id/parentalGate" app:popUpToInclusive="true"/>
+    <activity android:label="parentalSettingsActivity" android:name="media.tiger.tigerbox.ui.settings.SettingsActivity" android:id="@+id/parentalSettingsActivity"/>
+    <action android:id="@+id/action_to_parentalSettings" app:destination="@+id/parentalSettingsActivity" app:popUpTo="@+id/parentalSettingsActivity" app:popUpToInclusive="true"/>
+    <action android:id="@+id/action_to_MediaPlayer" app:destination="@+id/mainContentMediaPlayer" app:popUpTo="@+id/mainContentMediaPlayer" app:popUpToInclusive="true"/>
+    <action android:id="@+id/action_to_UserProfilesSwitching" app:destination="@+id/mainContentProfilesSwitching" app:popUpTo="@+id/mainContentProfilesSwitching" app:popUpToInclusive="true"/>
+    <action android:id="@+id/action_to_ShowProfilePicture" app:destination="@+id/mainContentShowProfilePicture" app:popUpTo="@+id/mainContentShowProfilePicture" app:popUpToInclusive="true"/>
+    <action android:id="@+id/action_to_offlineMode" app:destination="@+id/offlineModeFragment" app:popUpTo="@+id/maincontent_nav_graph" app:popUpToInclusive="true"/>
+    <action android:id="@+id/action_to_multiProductCard" app:destination="@+id/multiProductCardFragment" app:popUpTo="@+id/multiProductCardFragment" app:popUpToInclusive="true"/>
+    <action android:id="@+id/action_to_mainContentProductList" app:destination="@+id/mainContentProductList" app:popUpTo="@+id/maincontent_nav_graph" app:popUpToInclusive="true"/>
+    <include app:graph="@navigation/settings_navigation_graph"/>
+</navigation>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/fragment_tiger_ticket_input_pin_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/fragment_close_button" app:layout_constraintBottom_toTopOf="@+id/fragment_tigerCard_info" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/include_dialog_close_button"/>
+    <RelativeLayout android:orientation="vertical" android:id="@+id/fragment_tigerCard_info" android:background="@drawable/background_tiger_card" android:layout_width="@dimen/dp_300" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/fragment_tigerCard_numpad" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/dp_20" android:paddingRight="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_70" android:paddingHorizontal="@dimen/dp_20">
+            <TextView android:textColor="@color/error_red" android:gravity="center" android:id="@+id/fragment_tigerCard_error" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/tiger_card_pin_error" style="@style/TextAppearance.MainContent.PinEntry"/>
+            <TextView android:gravity="center" android:id="@+id/fragment_tigerCard_title" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/TextAppearance.MainContent.PinEntry"/>
+        </LinearLayout>
+        <TextView android:textColor="@color/main_device_name_text_color" android:id="@+id/fragment_tigerCard_pin" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.MainContent.PinEntry.Characters"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/fragment_tigerCard_numpad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/dp_50" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@+id/fragment_tigerCard_Button1" android:tag="binding_4" app:srcCompat="@drawable/ic_ticket_num_1_selector" style="@style/TigerCardPin"/>
+            <ImageButton android:id="@+id/fragment_tigerCard_Button2" android:tag="binding_5" app:srcCompat="@drawable/ic_ticket_num_2_selector" style="@style/TigerCardPin"/>
+            <ImageButton android:id="@+id/fragment_tigerCard_Button3" android:tag="binding_6" app:srcCompat="@drawable/ic_ticket_num_3_selector" style="@style/TigerCardPin"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@+id/fragment_tigerCard_Button4" android:tag="binding_7" app:srcCompat="@drawable/ic_ticket_num_4_selector" style="@style/TigerCardPin"/>
+            <ImageButton android:id="@+id/fragment_tigerCard_Button5" android:tag="binding_8" app:srcCompat="@drawable/ic_ticket_num_5_selector" style="@style/TigerCardPin"/>
+            <ImageButton android:id="@+id/fragment_tigerCard_Button6" android:tag="binding_9" app:srcCompat="@drawable/ic_ticket_num_6_selector" style="@style/TigerCardPin"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@+id/fragment_tigerCard_Button7" android:tag="binding_10" app:srcCompat="@drawable/ic_ticket_num_7_selector" style="@style/TigerCardPin"/>
+            <ImageButton android:id="@+id/fragment_tigerCard_Button8" android:tag="binding_11" app:srcCompat="@drawable/ic_ticket_num_8_selector" style="@style/TigerCardPin"/>
+            <ImageButton android:id="@+id/fragment_tigerCard_Button9" android:tag="binding_12" app:srcCompat="@drawable/ic_ticket_num_9_selector" style="@style/TigerCardPin"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/fragment_tigerCard_Button0" android:tag="binding_13" app:srcCompat="@drawable/ic_ticket_num_0_selector" style="@style/TigerCardPin"/>
+            <ImageButton android:layout_gravity="center" android:id="@+id/fragment_tigerCard_BackSpace" android:tag="binding_14" app:srcCompat="@drawable/ic_ticket_num_delete_selector" style="@style/TigerCardPin"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

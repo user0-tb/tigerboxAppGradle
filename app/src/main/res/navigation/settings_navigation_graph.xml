@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/settings_nav_graph" app:startDestination="@+id/parentalSettings">
+    <dialog android:label="parental_settings" android:name="media.tiger.tigerbox.ui.settings.SettingsFragment" android:id="@+id/parentalSettings">
+        <action android:id="@+id/action_parentalSettings_to_fullScreenSeekBar" app:destination="@+id/settingsFullScreenSeekBar"/>
+        <action android:id="@+id/action_parental_settings_to_enable_parental_gate_step" app:destination="@+id/parentalGateEnablingStep"/>
+        <action android:id="@+id/action_parental_settings_to_disable_parental_gate_step" app:destination="@+id/parentalGateDisablingStep"/>
+        <action android:id="@+id/action_parental_settings_to_wifiListFragment" app:destination="@+id/settingsWifiListFragment"/>
+        <action android:id="@+id/action_parentalSettings_to_systemInfoFragment" app:destination="@+id/systemInfoFragment"/>
+        <action android:id="@+id/action_parentalSettings_to_userProfilesSwitching" app:destination="@+id/profilesSwitching"/>
+        <action android:id="@+id/action_parental_settings_to_send_logs_in_progress" app:destination="@+id/sendLogsInProgressFragment"/>
+        <action android:id="@+id/action_parental_settings_to_send_logs_none" app:destination="@+id/sendLogsNoneFragment"/>
+        <action android:id="@+id/action_parentalSettings_to_timersSetupFragment" app:destination="@+id/timersSetupFragment"/>
+        <action android:id="@+id/action_parentalSettings_to_wildCardReAssigningStep1Fragment" app:destination="@+id/wildCardReAssigningStep1Fragment" app:popUpTo="@+id/parentalSettings" app:popUpToInclusive="false"/>
+        <action android:id="@+id/action_parentalSettings_to_wildCardReAssigningStep2Fragment" app:destination="@+id/wildCardReAssigningStep2Fragment" app:popUpTo="@+id/parentalSettings" app:popUpToInclusive="false"/>
+        <action android:id="@+id/action_parentalSettings_to_wildCardReAssigningStep4Fragment" app:destination="@+id/wildCardReAssigningStep4Fragment" app:popUpTo="@+id/parentalSettings" app:popUpToInclusive="false"/>
+        <action android:id="@+id/action_parentalSettings_to_updateFragment" app:destination="@+id/updateActivity" app:popUpTo="@+id/updateActivity" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_parentalSettings_to_ticketRedeemTicketNumberDialogFragment" app:destination="@+id/ticketRedeemTicketNumberDialogFragment"/>
+    </dialog>
+    <dialog android:label="resetInProgressFragment" android:name="media.tiger.tigerbox.ui.common.reset.ResetInProgressFragment" android:id="@+id/resetInProgressFragment"/>
+    <dialog android:label="resetDialogFragment" android:name="media.tiger.tigerbox.ui.common.reset.ResetDialogFragment" android:id="@+id/resetDialogFragment">
+        <action android:id="@+id/action_resetDialog_to_resetInProgress" app:destination="@+id/resetInProgressFragment"/>
+    </dialog>
+    <dialog android:label="parentalGateEnablingStep" android:name="media.tiger.tigerbox.ui.settings.parentalGate.ParentalGateEnableStepFragment" android:id="@+id/parentalGateEnablingStep"/>
+    <dialog android:label="parentalGateDisablingStep" android:name="media.tiger.tigerbox.ui.settings.parentalGate.ParentalGateDisableStepFragment" android:id="@+id/parentalGateDisablingStep"/>
+    <dialog android:label="fragment_settings_full_screen_seekbar" android:name="media.tiger.tigerbox.ui.settings.FullScreenSeekBarFragment" android:id="@+id/settingsFullScreenSeekBar">
+        <argument android:name="seekBarType" app:argType="media.tiger.tigerbox.ui.settings.SeekBarDialogType"/>
+    </dialog>
+    <dialog android:label="fragment_settings_wifi_list" android:name="media.tiger.tigerbox.ui.settings.SettingsWifiFragment" android:id="@+id/settingsWifiListFragment">
+        <action android:id="@+id/action_settingsWifiListFragment_to_wifiEnterPasswordFragment" app:destination="@+id/wifiEnterPasswordFragment"/>
+    </dialog>
+    <dialog android:label="WifiEnterPasswordFragment" android:name="media.tiger.tigerbox.ui.common.wifi.WifiEnterPasswordFragment" android:id="@+id/wifiEnterPasswordFragment">
+        <argument android:name="wifiName" app:argType="string"/>
+    </dialog>
+    <dialog android:label="TicketRedeemTicketNumberDialogFragment" android:name="media.tiger.tigerbox.ui.settings.wildcardreassigning.TicketRedeemTicketNumberDialogFragment" android:id="@+id/ticketRedeemTicketNumberDialogFragment"/>
+    <dialog android:label="system_info_fragment" android:name="media.tiger.tigerbox.ui.settings.systeminfo.SystemInfoFragment" android:id="@+id/systemInfoFragment"/>
+    <dialog android:label="InfoDialogFragment" android:name="media.tiger.tigerbox.ui.common.InfoDialogFragment" android:id="@+id/infoDialogFragment"/>
+    <dialog android:label="fragment_profiles" android:name="media.tiger.tigerbox.ui.main.profiles.ProfilesFragment" android:id="@+id/profilesSwitching"/>
+    <dialog android:label="timers_setup_length_fragment" android:name="media.tiger.tigerbox.ui.settings.timersSetup.TimersSetupWindowSetupFragment" android:id="@+id/timersWindowSetupFragment">
+        <argument android:name="isDeletable" android:defaultValue="false" app:argType="boolean"/>
+        <argument android:name="index" android:defaultValue="1" app:argType="integer"/>
+    </dialog>
+    <dialog android:label="timers_setup_length_fragment" android:name="media.tiger.tigerbox.ui.settings.timersSetup.TimersSetupLimitSetupFragment" android:id="@+id/timersLimitSetupFragment">
+        <argument android:name="isSleepTimer" android:defaultValue="false" app:argType="boolean"/>
+        <argument android:name="sleepSeconds" android:defaultValue="0" app:argType="integer"/>
+    </dialog>
+    <dialog android:label="timers_setup_fragment" android:name="media.tiger.tigerbox.ui.settings.timersSetup.TimersSetupFragment" android:id="@+id/timersSetupFragment">
+        <action android:id="@+id/action_timersSetup_to_limitEditFragment" app:destination="@+id/timersLimitSetupFragment"/>
+        <action android:id="@+id/action_timersSetup_to_windowEditFragment" app:destination="@+id/timersWindowSetupFragment"/>
+    </dialog>
+    <dialog android:label="send_logs_finished_fragment" android:name="media.tiger.tigerbox.ui.settings.sendLogs.SendLogsFinishedFragment" android:id="@+id/sendLogsFinishedFragment"/>
+    <dialog android:label="send_logs_none_fragment" android:name="media.tiger.tigerbox.ui.settings.sendLogs.SendLogsNoneFragment" android:id="@+id/sendLogsNoneFragment"/>
+    <dialog android:label="send_logs_in_progress_fragment" android:name="media.tiger.tigerbox.ui.settings.sendLogs.SendLogsInProgressFragment" android:id="@+id/sendLogsInProgressFragment">
+        <action android:id="@+id/action_send_logs_in_progress_to_finished" app:destination="@+id/sendLogsFinishedFragment" app:popUpTo="@+id/sendLogsInProgressFragment" app:popUpToInclusive="true"/>
+    </dialog>
+    <dialog android:label="wildCardReAssigningStep1Fragment" android:name="media.tiger.tigerbox.ui.settings.wildcardreassigning.WildCardReAssigningStep1Fragment" android:id="@+id/wildCardReAssigningStep1Fragment"/>
+    <dialog android:label="WildCardReAssigningStep2Fragment" android:name="media.tiger.tigerbox.ui.settings.wildcardreassigning.WildCardReAssigningStep2Fragment" android:id="@+id/wildCardReAssigningStep2Fragment">
+        <action android:id="@+id/action_wildCardReAssigningStep2Fragment_to_wildCardReAssigningStep3Fragment" app:destination="@+id/wildCardReAssigningStep3Fragment" app:popUpTo="@+id/parentalSettings" app:popUpToInclusive="false"/>
+    </dialog>
+    <dialog android:label="WildCardReAssigningStep3Fragment" android:name="media.tiger.tigerbox.ui.settings.wildcardreassigning.WildCardReAssigningStep3Fragment" android:id="@+id/wildCardReAssigningStep3Fragment"/>
+    <dialog android:label="WildCardReAssigningStep4Fragment" android:name="media.tiger.tigerbox.ui.settings.wildcardreassigning.WildCardReAssigningStep4Fragment" android:id="@+id/wildCardReAssigningStep4Fragment"/>
+    <activity android:label="updateActivity" android:name="media.tiger.tigerbox.ui.update.UpdateActivity" android:id="@+id/updateActivity"/>
+    <dialog android:label="TigerTicketInputPinFragment" android:name="media.tiger.tigerbox.ui.main.card.TigerTicketInputPinFragment" android:id="@+id/tigerTicketInputPinDialog">
+        <argument android:name="tigerTicketStepDomain" app:argType="media.tiger.tigerbox.services.interfaces.TigerTicketStepDomain"/>
+        <action android:id="@+id/action_tigetTicketPin_to_tigerTicketPurchaseOrCancel" app:destination="@+id/tigerTicketInputPinValid" app:popUpTo="@+id/parentalSettings"/>
+        <action android:id="@+id/action_tigetTicketPin_to_tigerTicketPurchase" app:destination="@+id/tigerTicketPurchaseDialog" app:popUpTo="@+id/parentalSettings"/>
+    </dialog>
+    <action android:id="@+id/action_to_tigerTicketPinInput" app:destination="@+id/tigerTicketInputPinDialog" app:popUpTo="@+id/parentalSettings"/>
+</navigation>

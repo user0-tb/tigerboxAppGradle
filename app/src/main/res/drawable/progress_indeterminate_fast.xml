@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@mipmap/loading_type1" android:fromDegrees="1080" android:toDegrees="0"/>

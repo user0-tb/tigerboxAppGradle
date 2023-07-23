@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/statusBarBackground">
+        <inset android:insetLeft="-20dp" android:insetRight="-20dp">
+            <shape>
+                <solid android:color="@color/seekbar_bg_color"/>
+                <stroke android:width="@dimen/media_player_seekbar_stroke" android:color="@android:color/transparent"/>
+                <corners android:radius="15dp"/>
+                <size android:height="@dimen/media_player_seekbar"/>
+            </shape>
+        </inset>
+    </item>
+    <item android:id="@android:id/progress">
+        <inset android:insetLeft="-20dp" android:insetRight="-20dp">
+            <clip>
+                <shape>
+                    <solid android:color="@color/main_theme_color"/>
+                    <stroke android:width="@dimen/media_player_seekbar_stroke" android:color="@android:color/transparent"/>
+                    <corners android:radius="15dp"/>
+                    <size android:height="@dimen/media_player_seekbar"/>
+                </shape>
+            </clip>
+        </inset>
+    </item>
+</layer-list>

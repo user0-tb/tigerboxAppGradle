@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/fragment_media_player_fullscreen_cover_0" android:padding="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/fragment_close_button" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/include_dialog_close_button"/>
+    <ImageView android:id="@+id/medialPlayer_fullscreen_cover_image" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

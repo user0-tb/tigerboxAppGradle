@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval" android:useLevel="false">
+            <solid android:color="@android:color/white"/>
+            <size android:height="@dimen/media_player_seekbar" android:width="@dimen/media_player_seekbar"/>
+        </shape>
+    </item>
+</layer-list>

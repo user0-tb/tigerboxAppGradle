@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:sharedUserId="android.uid.system" android:versionCode="76" android:versionName="1.8.0" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="media.tiger.tigerbox" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <uses-sdk android:minSdkVersion="22" android:targetSdkVersion="30"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS"/>
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.SHUTDOWN"/>
+    <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="true"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:theme="@style/TigerboxTheme" android:label="@string/app_name" android:icon="@mipmap/icon_tiger" android:name="media.tiger.tigerbox.TigerBoxApplication" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="true" android:roundIcon="@mipmap/icon_tiger_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity android:theme="@style/MainContentTheme" android:name="media.tiger.tigerbox.ui.main.MainContentActivity" android:exported="true" android:screenOrientation="landscape"/>
+        <activity android:theme="@style/OnboardingTheme" android:name="media.tiger.tigerbox.ui.update.UpdateActivity" android:screenOrientation="landscape"/>
+        <activity android:theme="@style/SettingsTheme" android:name="media.tiger.tigerbox.ui.settings.SettingsActivity" android:screenOrientation="landscape" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/OnboardingTheme" android:name="media.tiger.tigerbox.ui.LauncherActivity" android:exported="true" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/OnboardingTheme" android:name="media.tiger.tigerbox.ui.onboarding.OnboardingActivity" android:launchMode="singleInstance" android:screenOrientation="landscape" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <receiver android:name="media.tiger.tigerbox.services.implementations.NightLightTimerReceiver" android:enabled="true" android:exported="true"/>
+        <receiver android:name="media.tiger.tigerbox.services.implementations.UpdateCheckTimerReceiver" android:enabled="true" android:exported="true"/>
+        <receiver android:name="media.tiger.tigerbox.services.implementations.receiver.DateChangeBroadcastReceiver" android:enabled="true" android:exported="true"/>
+        <receiver android:name="media.tiger.tigerbox.services.implementations.receiver.WindowedLimitBroadcastReceiver" android:enabled="true" android:exported="true"/>
+        <receiver android:name="media.tiger.tigerbox.services.implementations.receiver.ButtonBroadcastReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="org.huiyu.honeybot.action.ReadButton"/>
+                <action android:name="org.huiyu.honeybot.action.RecButtonDown"/>
+                <action android:name="org.huiyu.honeybot.action.RecButtonUp"/>
+                <action android:name="tigerbox_go_home"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="media.tiger.tigerbox.services.implementations.receiver.DisplayBroadcastReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="screen_dims_status"/>
+                <action android:name="tiger_box.intent.action.SCREEN_DIMS"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="media.tiger.tigerbox.services.implementations.receiver.SafeguardBroadcastReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.bts84.Abnormal_current"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="media.tiger.tigerbox.services.implementations.receiver.HeadsetBroadcastReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.HEADSET_PLUG"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="media.tiger.tigerbox.androidx-startup">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+    </application>
+</manifest>

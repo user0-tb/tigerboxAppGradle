@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle" android:useLevel="false">
+            <solid android:color="@color/product_placeholder_background_color"/>
+            <corners android:radius="@dimen/dp_20"/>
+            <size android:height="100dp" android:width="100dp"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@mipmap/tiger_grey_small" android:filter="true"/>
+    </item>
+</layer-list>
