@@ -1340,7 +1340,6 @@
     <attr name="itemIconTint" format="color">
     </attr>
     <attr name="itemMaxLines" format="integer">
-        <item name="?0x1000001" value="1" />
     </attr>
     <attr name="itemMinHeight" format="dimension">
     </attr>
