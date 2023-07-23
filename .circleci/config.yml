@@ -25,11 +25,13 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       # Create a wrapper
+      - run: ./gradlew tasks
       - run: gradle wrapper 
+      - run: ./gradlew androidDependencies
 
       # The next step will run the unit tests
       - run: ./gradlew assembleDebug
-
+      
       # Then start the emulator and run the Instrumentation tests!
       - android/start-emulator-and-run-tests:
           test-command: ./gradlew connectedDebugAndroidTest
