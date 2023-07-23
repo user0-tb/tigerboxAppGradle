@@ -30,7 +30,7 @@ jobs:
       - run: ./gradlew androidDependencies
 
       # The next step will run the unit tests
-      - run: ./gradlew assembleDebug
+      - run: ./gradlew assembleRelease
       
       # Then start the emulator and run the Instrumentation tests!
       - android/start-emulator-and-run-tests:
