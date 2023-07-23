@@ -24,6 +24,8 @@ jobs:
     steps:
       # Checkout the code as the first step.
       - checkout
+      # Create a wrapper
+      - run: gradle wrapper 
 
       # The next step will run the unit tests
       - android/run-tests:
